@@ -12,14 +12,14 @@ import java.util.Scanner;
  * @author Notsawo
  */
 public class TestUtilisateur {
-     public static void main(String[] args){
-        Utilisateur u;
-        Scanner sc = new Scanner(System.in);
-        u = new Utilisateur();
+    Utilisateur u;
+    Scanner sc = new Scanner(System.in);
+    u = new Utilisateur();
+    do{
         System.out.println("Entrez votre nom : ");
         u.setNom(sc.nextLine());
-        System.out.println("Entrez votre prenom : ");
-        u.setPrenom(sc.nextLine());
-        System.out.println(u);
-    }
+    }while(u.getNom().replaceAll(" ", "").equals(""));
+    System.out.println("Entrez votre prenom : ");
+    u.setPrenom(sc.nextLine());
+    System.out.println(u);
 }
